@@ -38,6 +38,8 @@ dependencies:
   flutter_blue_plus: ^1.32.12
   get: ^4.6.6
   permission_handler: ^11.3.1
+  qr_code_scanner: ^1.0.1
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:

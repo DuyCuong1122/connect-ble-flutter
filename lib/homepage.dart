@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:connect_ble/qr_code_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'connection_page.dart';
@@ -16,8 +17,8 @@ class Homepage extends GetView<BLEController> {
         centerTitle: true,
         actions: [
           TextButton(
-              onPressed: () async => await controller.scanDevice(),
-              child: const Text("Scan"))
+              onPressed: () => Get.to(() => const ScanQrScreen()),
+              child: const Text("Scan qr"))
         ],
       ),
       body: Column(

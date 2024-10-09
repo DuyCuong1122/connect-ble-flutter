@@ -17,7 +17,8 @@ class ConnectionPage extends GetView<BLEController> {
           icon: const Icon(Icons.arrow_back),
           onPressed: () async {
             controller.scannedDevices.clear();
-            await device.device.disconnect();
+            controller.clearData();
+            await controller.disconnectFromDevice(device.device);
             Get.back();
           },
         ),
